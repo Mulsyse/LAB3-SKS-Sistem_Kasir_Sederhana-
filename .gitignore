@@ -1,0 +1,14 @@
+# Abaikan seluruh isi repository terlebih dahulu
+*
+
+# Tetap izinkan folder untuk mengakses file di dalamnya
+!*/
+
+# Pilih jenis file yang diperbolehkan masuk ke repository
+!*.pas
+!*.pdf
+!*.md
+!*.svg
+
+# Sertakan file pengaturan Git
+!.gitignore

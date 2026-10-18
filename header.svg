@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="280" viewBox="0 0 900 280" role="img" aria-label="Sistem Kasir">
+  <defs>
+    <clipPath id="bulat">
+      <rect width="900" height="280" rx="28"/>
+    </clipPath>
+
+    <linearGradient id="latar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a">
+        <animate attributeName="stop-color" values="#0f172a;#3b0764;#022c22;#0f172a" dur="14s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#1e3a8a">
+        <animate attributeName="stop-color" values="#1e3a8a;#0e7490;#7c2d12;#1e3a8a" dur="14s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="teks" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee">
+        <animate attributeName="stop-color" values="#22d3ee;#f472b6;#facc15;#4ade80;#22d3ee" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.5" stop-color="#a78bfa">
+        <animate attributeName="stop-color" values="#a78bfa;#facc15;#4ade80;#22d3ee;#a78bfa" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#f472b6">
+        <animate attributeName="stop-color" values="#f472b6;#4ade80;#22d3ee;#a78bfa;#f472b6" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <filter id="cahaya" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+
+    <radialGradient id="koin" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#fef08a"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </radialGradient>
+  </defs>
+
+  <g clip-path="url(#bulat)">
+    <rect width="900" height="280" fill="url(#latar)"/>
+
+    <!-- gelembung cahaya -->
+    <circle cx="90" cy="70" r="46" fill="#22d3ee" opacity="0.10">
+      <animate attributeName="cy" values="70;100;70" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="800" cy="60" r="64" fill="#f472b6" opacity="0.10">
+      <animate attributeName="cy" values="60;95;60" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="200" r="34" fill="#facc15" opacity="0.10">
+      <animate attributeName="cy" values="200;170;200" dur="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- koin melayang -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -14;0 0" dur="3.2s" repeatCount="indefinite"/>
+      <circle cx="120" cy="150" r="22" fill="url(#koin)" stroke="#fde68a" stroke-width="2"/>
+      <text x="120" y="157" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#92400e">Rp</text>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 12;0 0" dur="4s" repeatCount="indefinite"/>
+      <circle cx="790" cy="140" r="26" fill="url(#koin)" stroke="#fde68a" stroke-width="2"/>
+      <text x="790" y="148" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#92400e">Rp</text>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0" dur="2.6s" repeatCount="indefinite"/>
+      <circle cx="205" cy="52" r="13" fill="url(#koin)" stroke="#fde68a" stroke-width="1.5"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 10;0 0" dur="3.6s" repeatCount="indefinite"/>
+      <circle cx="705" cy="48" r="11" fill="url(#koin)" stroke="#fde68a" stroke-width="1.5"/>
+    </g>
+
+    <!-- bintang kecil berkedip -->
+    <g fill="#ffffff">
+      <circle cx="330" cy="40" r="2.5"><animate attributeName="opacity" values="0.1;1;0.1" dur="2.2s" repeatCount="indefinite"/></circle>
+      <circle cx="560" cy="34" r="2"><animate attributeName="opacity" values="1;0.1;1" dur="2.8s" repeatCount="indefinite"/></circle>
+      <circle cx="250" cy="215" r="2"><animate attributeName="opacity" values="0.1;1;0.1" dur="3.1s" repeatCount="indefinite"/></circle>
+      <circle cx="640" cy="222" r="2.5"><animate attributeName="opacity" values="1;0.1;1" dur="2.4s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- judul: lapisan cahaya lalu teks -->
+    <text x="450" y="125" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" letter-spacing="6" fill="url(#teks)" filter="url(#cahaya)" opacity="0.75">SISTEM KASIR</text>
+    <text x="450" y="125" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="82" font-weight="800" letter-spacing="6" fill="url(#teks)">
+      SISTEM KASIR
+      <animate attributeName="opacity" values="1;0.88;1" dur="3s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- garis berjalan -->
+    <line x1="260" y1="150" x2="640" y2="150" stroke="url(#teks)" stroke-width="4" stroke-linecap="round" stroke-dasharray="34 14">
+      <animate attributeName="stroke-dashoffset" from="0" to="-48" dur="1.4s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- subjudul -->
+    <text x="450" y="192" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="23" fill="#e0e7ff" letter-spacing="1.5">
+      Kelola stok · Isi keranjang · Bayar dengan mudah
+      <animate attributeName="opacity" values="0.65;1;0.65" dur="4s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- ombak bawah -->
+    <path fill="#22d3ee" opacity="0.28" d="M0 244 Q112 218 225 244 T450 244 T675 244 T900 244 T1125 244 T1350 244 T1575 244 T1800 244 V280 H0 Z">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-450 0" dur="9s" repeatCount="indefinite"/>
+    </path>
+    <path fill="#a78bfa" opacity="0.30" d="M0 254 Q112 232 225 254 T450 254 T675 254 T900 254 T1125 254 T1350 254 T1575 254 T1800 254 V280 H0 Z">
+      <animateTransform attributeName="transform" type="translate" from="-450 0" to="0 0" dur="6s" repeatCount="indefinite"/>
+    </path>
+    <path fill="#f472b6" opacity="0.35" d="M0 264 Q112 246 225 264 T450 264 T675 264 T900 264 T1125 264 T1350 264 T1575 264 T1800 264 V280 H0 Z">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-450 0" dur="4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
