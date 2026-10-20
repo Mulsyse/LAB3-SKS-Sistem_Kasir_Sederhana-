@@ -240,10 +240,18 @@ function Konfirmasi: boolean;
 var
   jawab: char;
 begin
-  write('Apakah Anda yakin? (Y/T): ');
-  readln(jawab);
+  repeat
+    write('Apakah Anda yakin? (Y/T): ');
+    readln(jawab);
 
-  Konfirmasi := UpCase(jawab) = 'Y';
+    jawab := UpCase(jawab);
+
+    if (jawab <> 'Y') and (jawab <> 'T') then
+      writeln('Input tidak valid! Masukkan Y atau T saja.');
+
+  until (jawab = 'Y') or (jawab = 'T');
+
+  Konfirmasi := jawab = 'Y';
 end;
 
 // ==========================================
